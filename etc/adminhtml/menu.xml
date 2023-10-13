@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Abhinay_Core::Abhinay" title="Abhinay"
+             module="Abhinay_Core" sortOrder="10"
+             dependsOnModule="Abhinay_Core" resource="Abhinay_Core::Abhinay"
+        />
+        <add id="Abhinay_Core::abhinaycore" title="Abhinay Core"
+             translate="title" module="Abhinay_Core"
+             parent="Abhinay_Core::Abhinay" sortOrder="20"
+             resource="Abhinay_Core::abhinaycore"/>
+
+        <add id="Abhinay_Core::abhinayconfig"
+             title="Configurations" module="Abhinay_Core"
+             sortOrder="30" action="adminhtml/system_config/edit/section/abhinaycore"
+             resource="Abhinay_Core::abhinayconfig"
+             parent="Abhinay_Core::abhinaycore"/>
+    </menu>
+</config>
